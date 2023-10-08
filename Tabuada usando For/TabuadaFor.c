@@ -4,18 +4,18 @@
 
 #include <stdio.h>
 
-int main(){
+int main(void)
+{
     int mdr, mdo, prod;
     printf("Informe o multiplicador: ");
     scanf("%d", &mdr);
 
-    for(mdo=0; mdo<=10; mdo++){                     //for é um loop com a sintaxe geral: 
-        prod=(mdr*mdo);                             //for (inicialização; condição; atualização)
+    // Sintaxe geral: for(inicialização; condição; atualização)
+    for(mdo = 0; mdo <= 10; mdo++)
+    {
+        prod = (mdr * mdo);
         printf("\n %d X %d = %d", mdr, mdo, prod);
-
     }
-
-
 
     return 0;
 }

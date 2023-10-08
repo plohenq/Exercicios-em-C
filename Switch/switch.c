@@ -11,12 +11,14 @@
 
 
 #include <stdio.h>
-#include <stdLib.h> // system ("pause) / system (cls)
+// system ("pause) / system (cls)
+#include <stdLib.h>
 
-int main(){
+int main(void)
+{
     int cod;
-    float preco;  //números reais (1.21, 1.31, etc...) 
-    
+    float preco;  //números reais (1.21, 1.31, etc...)
+   
     printf("PRODUTO X \n");
     printf("preco \n");
     scanf("%f", &preco);
@@ -24,7 +26,9 @@ int main(){
     scanf("%d", &cod);
     system("cls");
 
-    switch(cod){                                      //switch cases for simplify 'if and else'
+    switch(cod)
+    {                                      
+        //switch cases for simplify 'if and else'
         case 1: //caso
         printf("Procedencia do Produto: SUL\n");
         printf("Preco: %.2f",preco);
@@ -57,10 +61,7 @@ int main(){
 
         default:
         printf("Produto Importado!\n");
-
     }
 
-
     return 0;
-    
 }
