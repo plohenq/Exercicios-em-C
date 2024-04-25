@@ -17,13 +17,13 @@ void atualizarTempo(struct Tempo *t)
     if(t -> segundos == 60)
     {
         t -> segundos = 0;
-        t -> minutos = 1;
+        t -> minutos++;
     }
 
     if(t -> minutos == 60)
     {
         t -> minutos = 0;
-        t -> horas = 1;
+        t -> horas++;
     }
 
     if(t -> horas == 24)
