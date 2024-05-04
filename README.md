@@ -1,3 +1,3 @@
-# Exercícios em C
- Alguns exercícios antigos e recentes em C.
+# C exercises
+ Some code to remember concepts :)
     
