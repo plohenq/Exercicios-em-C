@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 struct Ponto 
 {
@@ -10,6 +11,13 @@ void deslocarPonto (struct Ponto *p, float dx, float dy)
 {
     p->x += dx;
     p->y += dy;
+}
+
+float calcularDistancia (struct Ponto *p1, struct Ponto *p2)
+{
+    float dx = p2->x - p1->x; // Diferença em x
+    float dy = p2->y - p1->y; // Diferença em y
+    return sqrt(dx * dx + dy * dy);
 }
 
 int main (void)
@@ -56,7 +64,11 @@ int main (void)
 
     deslocarPonto(&ponto2, dx2, dy2);
 
-    printf("Novas coordenadas do ponto 2: (x: %.2f, y: %.2f)", ponto2.x, ponto2.y);
+    printf("Novas coordenadas do ponto 2: (x: %.2f, y: %.2f)\n", ponto2.x, ponto2.y);
+
+    float distancia = calcularDistancia(&ponto1, &ponto2);
+
+    printf("A distancia entre x e y e: %.2f", distancia);
 
     return 0;
 }
